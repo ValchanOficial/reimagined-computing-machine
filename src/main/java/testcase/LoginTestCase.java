@@ -1,5 +1,6 @@
 package testcase;
 
+import static org.junit.Assert.assertTrue;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -33,6 +34,8 @@ public class LoginTestCase {
 		}else {
 			System.out.print("Falhou");
 		}
+		//verificaçãoComAssertTrue
+		assertTrue(this.driver.getPageSource().contains("The entered EU-VAT-ID is valid"));
 	}
 	@After
 	public void tearDown() {
