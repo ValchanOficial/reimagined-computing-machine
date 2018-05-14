@@ -4,18 +4,13 @@
   <artifactId>helloworld</artifactId>
   <version>0.0.1</version>
   
-  <properties>
-		<junit.version>4.12</junit.version>
-		<junit.params.version>1.1.1</junit.params.version>
-	</properties>
-
-	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>${junit.version}</version>
-			<scope>test</scope>
-		</dependency>
+  <dependencies>
+  	<dependency>
+    	<groupId>junit</groupId>
+    	<artifactId>junit</artifactId>
+    	<version>4.12</version>
+    	<scope>test</scope>
+	</dependency>
 	
   	<dependency>
     	<groupId>org.seleniumhq.selenium</groupId>
@@ -29,4 +24,17 @@
     	<version>2.2.1</version>
 	</dependency>
   </dependencies>
+  
+  	<!--  Par execucao dos testes via POM ou linha de comando pelo Manven -->
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.20.1</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 </project>
