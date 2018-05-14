@@ -24,12 +24,15 @@ public class LoginTestCase {
 	public void testMain() {
 		WebElement usernameTextField = this.driver.findElement(By.id("modlgn-username"));
 		WebElement passwordTextField = this.driver.findElement(By.id("modlgn-passwd"));
-		WebElement buttonButton = this.driver.findElement(By.cssSelector("input.button:nth-child(3)"));
-				
 		usernameTextField.sendKeys("demo");
 		passwordTextField.sendKeys("demo");
-		buttonButton.click();
-		
+		this.driver.findElement(By.cssSelector("input.button:nth-child(3)")).click();
+		//verificationPoint
+		if(this.driver.getPageSource().contains("The entered EU-VAT-ID is valid")) {
+			System.out.print("Entrou");
+		}else {
+			System.out.print("Falhou");
+		}
 	}
 	@After
 	public void tearDown() {
