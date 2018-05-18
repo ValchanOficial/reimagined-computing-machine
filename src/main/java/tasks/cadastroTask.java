@@ -1,9 +1,11 @@
 package tasks;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import appObject.cadastroAppObject;
 
 public class cadastroTask {
+
 	private cadastroAppObject cadastroAppObject;
 	
 	public cadastroTask(WebDriver driver) {
@@ -15,6 +17,8 @@ public class cadastroTask {
 		this.cadastroAppObject.getSenhaTextField().sendKeys(senha);
 		this.cadastroAppObject.getConfSenhaTextField().sendKeys(confSenha);
 		this.cadastroAppObject.getTelefoneTextField().sendKeys(telefone);
+		this.cadastroAppObject.getCidadeComboBox().sendKeys(Keys.ARROW_DOWN);
+		this.cadastroAppObject.getCidadeComboBox().sendKeys(Keys.ENTER);
 	}
 	public void enviarFormulario() {
 		this.cadastroAppObject.getCadastrarButton().click();

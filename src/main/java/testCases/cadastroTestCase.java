@@ -22,7 +22,7 @@ public class cadastroTestCase {
 	}
 	@Test
 	public void testMain() {
-		this.cadastro.preencherCadastro("Valchan", "valchan@teste.com.br", "senhateste", "senhateste", "5199999999", "Porto Alegre, RS");
+		this.cadastro.preencherCadastro("Valchan", "valchan@teste.com.br", "senhateste", "senhateste", "5199999999", "");
 		this.cadastro.enviarFormulario();
 	}
 	@After
