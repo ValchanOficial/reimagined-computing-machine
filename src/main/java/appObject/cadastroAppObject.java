@@ -28,7 +28,7 @@ public class cadastroAppObject {
 	public WebElement getCidadeComboBox() {
 		return this.driver.findElement(By.id("cidade"));
 	}
-	public WebElement getBotaoButton() {
+	public WebElement getCadastrarButton() {
 		return this.driver.findElement(By.cssSelector("#cadastrar > fieldset > div:nth-child(8) > div > input"));
 	}
 }
