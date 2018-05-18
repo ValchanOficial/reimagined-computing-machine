@@ -15,7 +15,6 @@ public class cadastroTask {
 		this.cadastroAppObject.getSenhaTextField().sendKeys(senha);
 		this.cadastroAppObject.getConfSenhaTextField().sendKeys(confSenha);
 		this.cadastroAppObject.getTelefoneTextField().sendKeys(telefone);
-		this.cadastroAppObject.getCidadeComboBox().sendKeys(cidade);
 	}
 	public void enviarFormulario() {
 		this.cadastroAppObject.getCadastrarButton().click();
